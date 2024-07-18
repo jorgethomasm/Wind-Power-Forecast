@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
 
-rm ./Wind-Power-Forecast.html
-quarto render ./Wind-Power-Forecast.qmd --to html
+# rm -rf docs/
+# mkdir docs
 
-rm -rf docs/
-mkdir docs
-cp ./Wind-Power-Forecast.html ./docs/
+quarto render ./Wind-Power-Forecast.qmd --to html
 
 p=$(pwd)
 git config --global --add safe.directory $p
