@@ -13,6 +13,8 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: "main"
+      - name: see_files_after_checkout
+        run: ls
       - name: update_power_forecast
         run: bash ./update_forecast.sh
         env:
