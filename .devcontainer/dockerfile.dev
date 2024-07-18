@@ -1,6 +1,6 @@
 # Setting an R environment
 # Step 1 - Import base image
-FROM rocker/r-ver:4.3.0
+FROM rocker/r-ver:4.3.1
 
 
 # Step 2 - Set arguments and environment variables
@@ -67,9 +67,11 @@ RUN bash ./settings/install_quarto.sh
 # Step 4 - Install remotes pck in order to install renv package
 RUN R -e "install.packages('remotes', repos = c(CRAN = 'https://cloud.r-project.org'))"
 RUN R -e "remotes::install_github('rstudio/renv')"
+RUN R -e "install.packages('rmarkdown', repos = c(CRAN = 'https://cloud.r-project.org'))"
+RUN R -e "install.packages('knitr', repos = c(CRAN = 'https://cloud.r-project.org'))"
+RUN R -e "install.packages('httpgd', repos = c(CRAN = 'https://cloud.r-project.org'))"
 
-
-# Step 5 - Install R packages
+# Step 5 - Install the rest of R packages in the virtual environment (renv)
 
 COPY ./renv.lock ./settings/
 RUN Rscript -e "options(renv.consent = TRUE); \
