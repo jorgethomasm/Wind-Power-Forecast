@@ -9,6 +9,8 @@ jobs:
     container: 
       image: jorgethomasm/wind-power-forecast:dev
     steps:
+      - name: see_files_before_checkout
+        run: ls
       - name: checkout_repo
         uses: actions/checkout@v3
         with:
