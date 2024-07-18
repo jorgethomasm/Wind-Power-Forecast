@@ -77,7 +77,7 @@ RUN Rscript -e "options(renv.consent = TRUE); \
     c(CRAN='https://cloud.r-project.org'))"
 
 
-# Step 5 - Set Python Environment (reticulate package already available)
+# Step 6 - Set Python Environment (reticulate package already available)
 COPY ./settings/install_python_venv.R ./settings/
 RUN Rscript ./settings/install_python_venv.R
 
