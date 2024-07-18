@@ -1,0 +1,1 @@
+wsl docker build -t wind-power-forecast:dev .. -f dockerfile.dev --progress=plain --build-arg PROJECT_NAME="Wind Power Forecast" --build-arg DEBIAN_FRONTEND=noninteractive --build-arg CRAN_MIRROR="https://cran.rstudio.com/"

@@ -8,5 +8,6 @@ reticulate::virtualenv_create("r-reticulate")
 reticulate::py_install(packages = c("openmeteo_requests",
                                     "requests_cache",
                                     "retry_requests",
-                                    "pandas"),
+                                    "pandas",
+                                    "radian"),
                        method = "virtualenv")

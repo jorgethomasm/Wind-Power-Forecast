@@ -15,6 +15,8 @@ if (interactive() && Sys.getenv("TERM_PROGRAM") == "vscode") {
 
 # Set CRAN Mirror
 
+options(repos = Sys.getenv("https://cran.rstudio.com/"))
+
 local({
   r <- getOption("repos")
   r["CRAN"] <- Sys.getenv("CRAN_MIRROR")
