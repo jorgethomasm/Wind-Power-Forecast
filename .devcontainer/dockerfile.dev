@@ -81,5 +81,5 @@ RUN Rscript -e "options(renv.consent = TRUE); \
 COPY ./settings/install_python_venv.R ./settings/
 RUN Rscript ./settings/install_python_venv.R
 
-COPY /settings/.Rprofile /
+COPY ./settings/.Rprofile /
 RUN echo "alias r='radian --profile=/.Rprofile'" >> ~/.bashrc
