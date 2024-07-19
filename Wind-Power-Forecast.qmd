@@ -36,11 +36,10 @@ Wind power and on-site energy forecast for **a Goldwind turbine model GW 165-6.0
 library("reticulate")
 
 # Use a specific virtualenv
-reticulate::use_virtualenv("r-reticulate")
+reticulate::use_virtualenv(Sys.getenv("VIRTUAL_ENV"), required = TRUE)
 
 # Sys.setenv(LD_LIBRARY_PATH = paste0(Sys.getenv("HOME"),"/opt/python-3.6.2/lib"))
-# Sys.getenv("LD_LIBRARY_PATH")
-# use_virtualenv("/home/user/pylift", required=TRUE)
+# Sys.getenv("LD_LIBRARY_PATH"
 # py_config()
 
 library("dplyr")
@@ -71,7 +70,7 @@ reticulate::source_python("./utils/request_weather.py")
 
 hourly_df <- py$hourly_dataframe
 
-# Last update weather data log
+# Last update weather data logSys
 write.table(hourly_df, "./data/last_req_weather.csv", sep = ",", quote = FALSE)
 
 # ====== Wind Turbine Specs ======
