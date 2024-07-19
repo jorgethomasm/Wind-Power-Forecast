@@ -35,13 +35,6 @@ Wind power and on-site energy forecast for **a Goldwind turbine model GW 165-6.0
 
 library("reticulate")
 
-library("dplyr")
-library("ggplot2")
-library("tibble")
-library("lubridate")
-library("kableExtra")
-library("reticulate")
-
 # Use a specific virtualenv
 reticulate::use_virtualenv("r-reticulate")
 
@@ -50,6 +43,11 @@ reticulate::use_virtualenv("r-reticulate")
 # use_virtualenv("/home/user/pylift", required=TRUE)
 # py_config()
 
+library("dplyr")
+library("ggplot2")
+library("tibble")
+library("lubridate")
+library("kableExtra")
 library("xts")
 library("plotly")
 
