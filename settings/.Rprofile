@@ -1,5 +1,3 @@
-source("renv/activate.R")
-
 #' Source:
 #' https://github.com/REditorSupport/vscode-R/wiki/Plot-viewer#svg-in-httpgd-webpage
 
