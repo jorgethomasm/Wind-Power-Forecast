@@ -34,12 +34,22 @@ Wind power and on-site energy forecast for **a Goldwind turbine model GW 165-6.0
 # ========================== Load Dependencies ==========================
 
 library("reticulate")
+
 library("dplyr")
 library("ggplot2")
 library("tibble")
 library("lubridate")
 library("kableExtra")
 library("reticulate")
+
+# Use a specific virtualenv
+reticulate::use_virtualenv("r-reticulate")
+
+# Sys.setenv(LD_LIBRARY_PATH = paste0(Sys.getenv("HOME"),"/opt/python-3.6.2/lib"))
+# Sys.getenv("LD_LIBRARY_PATH")
+# use_virtualenv("/home/user/pylift", required=TRUE)
+# py_config()
+
 library("xts")
 library("plotly")
 
