@@ -64,7 +64,8 @@ RUN bash ./settings/install_quarto.sh
 
 # Step 4 - Install remotes pckage 
 COPY ./settings/install_R_packages.R ./settings/
-CMD ["Rscript -e", "./settings/install_R_packages.R"]
+RUN Rscript ./settings/install_R_packages.R
+# CMD ["Rscript -e", "./settings/install_R_packages.R"]
 
 
 # Step 5 - Install the rest of R packages in the virtual environment (renv)
