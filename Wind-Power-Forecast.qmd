@@ -37,7 +37,9 @@ library("reticulate")
 
 # Use a specific virtualenv
 reticulate::use_virtualenv(Sys.getenv("VIRTUAL_ENV"), required = TRUE)
+# reticulate::use_virtualenv(paste0("/opt/", Sys.getenv("VENV_NAME")), required = TRUE)
 
+# Sys.getenv("VIRTUAL_ENV")
 # Sys.setenv(LD_LIBRARY_PATH = paste0(Sys.getenv("HOME"),"/opt/python-3.6.2/lib"))
 # Sys.getenv("LD_LIBRARY_PATH"
 # py_config()

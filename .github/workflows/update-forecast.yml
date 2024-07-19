@@ -8,15 +8,15 @@ jobs:
     runs-on: ubuntu-22.04
     container: 
       image: jorgethomasm/wind-power-forecast:dev
-    steps:
-      - name: see_files_before_checkout
-        run: ls
+    steps:      
       - name: checkout_repo
         uses: actions/checkout@v3
         with:
           ref: "main"
       - name: see_files_after_checkout
         run: ls
+      - name: inspect_environment
+        run: Rscript -e "Sys.getenv()"
       - name: update_power_forecast
         run: bash ./update_forecast.sh
         env:
