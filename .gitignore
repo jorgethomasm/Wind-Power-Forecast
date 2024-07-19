@@ -4,6 +4,4 @@
 .Ruserdata
 
 /.quarto/
-/.devcontainer/
 /docker/
-/settings/
